@@ -52,24 +52,35 @@ section {
     margin: 0;
     height: 500px;
     position: absolute;   
+    background: rgb(3,9,4);
+    background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
+   
 }
 
-.hero-content {
-    width: 50%; 
-    flex-basis: 50%;
-    padding-right: 50px;
-}
 
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    background: rgb(3,9,4);
-    background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
     position: relative;
+    background-image: url(/img/hkskylinesmall.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
 }
+      
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
+        opacity: .95;
+      }
 
-.hero-image{}
 
 
 
@@ -82,7 +93,7 @@ section {
     padding-right: 50px;
     
 }
-
+*/
 h1 {
     margin-bottom: 25px;
     font-size: 2rem;
@@ -102,8 +113,8 @@ button {
 .about {
     width: 100%;
     position: relative;
-    background: rgb(59,48,143);
-    background: linear-gradient(90deg, rgba(59,48,143,1) 0%, rgba(121,44,207,1) 100%);
+    background: rgb(3,9,4);
+    background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
     padding: 50px 150px 150px 150px;
 }
 
@@ -130,8 +141,8 @@ footer {
     padding: 20px
 }
 
-@media screen and (min-width:600px) {  
-    .img-container img {
+@media screen and (max-width:680px) {  
+     .hero {
       display: none;
     }
   }
