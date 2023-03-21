@@ -58,32 +58,44 @@ section {
 }
 
 
-.hero {
+ .hero {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    background-image: url(/img/hkskylinesmall.png);
+    background-image: url(/img/hkskylinesmall.png); 
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
+    background-position: right bottom;
+    background-size: 58%;
 }
       
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
-        opacity: .95;
-      }
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
+    opacity: 1;
+} 
 
 
-
-
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(/img/hkskylinesmall.png); 
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 58%;
+    opacity: 0.5;
+}
 
 
 
@@ -93,10 +105,12 @@ section {
     padding-right: 50px;
     
 }
-*/
+
 h1 {
     margin-bottom: 25px;
     font-size: 2rem;
+    margin-top: 0;
+    
 }
 
 button {
@@ -107,15 +121,25 @@ button {
     margin: 50px 0 50px 0
 }
 
-
-
-
 .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
     width: 100%;
     position: relative;
     background: rgb(3,9,4);
-    background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
+    background: linear-gradient(90deg, rgba(3,9,4,0.6) 0%, rgba(58,32,87,1) 100%);
     padding: 50px 150px 150px 150px;
+}
+
+.info {
+    height: 100px;
+    width: 100px;
+    border: solid 2px black;
+    margin: 10px;
+    padding: 10px;
 }
 
 .quote {
