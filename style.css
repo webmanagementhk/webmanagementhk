@@ -70,7 +70,7 @@ section {
     background-image: url(/img/hkskylinesmall.png); 
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: 58%;
+    background-size: 38%;
 }
       
 .hero::before {
@@ -126,34 +126,61 @@ button {
 }
 
 .about {
-    display: flex;
-    justify-content: center;
+    max-height: 500px;
     min-width: 100%;
     position: relative;
-    background: rgb(3,9,4);
     background: linear-gradient(90deg, rgba(3,9,4,0.6) 0%, rgba(58,32,87,1) 100%);
     padding: 50px 150px 100px 150px;
+    
+    
 }
 
 .title {
-    position: absolute;
+    text-align: center;
 }
 
-.info {
+.box-container {
     display: flex;
-    justify-content: space-around;
-    height: 10rem;
-    width: 10rem;
-    border: solid 2px rgb(3,9,4);;
-    margin: 20px;
-    margin-top: 100px;
-    padding: 10px;
-    border-radius: 10%;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-height: fit-content;
+    box-sizing: border-box; /* add this property */
+    width: 100%; /* add this property */
+    max-width: 1200px; /* add this property */
+    padding: 0 30px; /* add this property */
+    
+    
 }
 
-.info p {
-    margin: auto;
+.box {
+    width: 300px;
+    height: 150px;
+    border: solid 2px rgb(22, 34, 34);
+    max-height: fit-content;
+    margin: 20px;
+    box-sizing: border-box; /* add this property */
+  padding: 20px; /* add this property */
 }
+
+.box img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .box-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .box {
+      width: 100%;
+    }
+    
+    .title {
+      font-size: 14px;
+    }
+  }
 
 
 
