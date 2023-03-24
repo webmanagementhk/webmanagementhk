@@ -129,7 +129,7 @@ button {
     max-height: 500px;
     min-width: 100%;
     position: relative;
-    background: linear-gradient(90deg, rgba(3,9,4,0.6) 0%, rgba(58,32,87,1) 100%);
+    background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
     padding: 50px 150px 100px 150px;
     
     
@@ -143,28 +143,24 @@ button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-height: fit-content;
     box-sizing: border-box; /* add this property */
-    width: 100%; /* add this property */
-    max-width: 1200px; /* add this property */
     padding: 0 30px; /* add this property */
-    
-    
 }
 
 .box {
     width: 300px;
-    height: 150px;
+    height: 300px;
     border: solid 2px rgb(22, 34, 34);
-    max-height: fit-content;
     margin: 20px;
     box-sizing: border-box; /* add this property */
-  padding: 20px; /* add this property */
+    padding: 20px; /* add this property */
 }
 
 .box img {
     width: 100%;
     height: 100%;
+    object-fit: fill;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -179,6 +175,7 @@ button {
     
     .title {
       font-size: 14px;
+      
     }
   }
 
@@ -191,6 +188,7 @@ button {
     background: rgb(3,9,4);
     background: linear-gradient(90deg, rgba(3,9,4,1) 0%, rgba(58,32,87,1) 100%);
     color: white;
+    text-align: center;
     }
 
 .contact {
@@ -204,7 +202,8 @@ footer {
     width: 100%;
     height: 50px;
     background-color:rgb(40, 58, 105);
-    padding: 20px
+    padding: 20px;
+    text-align: center;
 }
 
 @media screen and (max-width:680px) {  
